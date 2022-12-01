@@ -1,0 +1,14 @@
+.item {
+    text-align: center;
+}
+
+img {
+    height: 100px;
+}
+
+.containerHome {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}

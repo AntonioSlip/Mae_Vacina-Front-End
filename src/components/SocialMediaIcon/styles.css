@@ -1,0 +1,21 @@
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+
+.socialMedia img {
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+}
+
+.top {
+    margin-top: 50px;
+}
+
+.top h1 {
+    text-align: center;
+}
+

@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    margin-top: 10rem;
+    background-color: rgb(109, 102, 102);
+    box-shadow: 2px .8rem 1rem rgba(0, 0, 0, .025);
+}
+
+.card__publication {
+    position: relative;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.card__publication img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s;
+}
+
+.card:hover .card__publication img {
+    transform: scale(1.5);
+}
+
+.card__publication>div {
+    background: linear-gradient(to right bottom,
+            rgba(255, 119, 48, .8), rgba(255, 185, 0, .8));
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+}
+
+.card__publication i {
+    margin-right: .1rem;
+}
+
+.card__publication span {
+    display: block;
+}
+
+.card__author {
+    margin-bottom: .5rem;
+}
+
+.card__info {
+    position: relative;
+    padding: 2rem 3rem;
+}
+
+.card__info h1 {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.card__title {
+    font-size: 1.2rem;
+}
+
+.card__subtitle {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #a2a2a2;
+    margin-bottom: 1rem;
+}
+
+.card__cta {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff7730;
+    margin-top: 2rem;
+}
+
+.card__cta span {
+    display: inherit;
+    transition: transform .5s;
+}
+
+.card__cta:hover span {
+    transform: translateX(.5rem);
+}
+
+@media screen and (min-width: 37.5em) {
+    .card {
+        display: grid;
+        grid-auto-flow: column;
+        max-width: 75rem;
+    }
+
+    .card__publication {
+        width: 25rem;
+        height: initial;
+    }
+}
+
+.booklet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.booklet li{
+    display: flex;
+    flex-direction: column;
+    border: 2px blueviolet solid;
+    border-radius: 1rem;
+    height: 6rem;
+    width: 12rem;
+    background: #ffffff;
+    list-style-type: none;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.containerBorder {
+    margin-top: 5rem;
+    width: 50%;
+    height: 20rem;
+    margin-left: 25%;
+    background-image: url('https://www.paho.org/sites/default/files/styles/max_1500x1500/public/2022-08/generic-vaccine-1500x1000.jpg?itok=IoGkc1TM');
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 1px 2px rgb(255, 0, 0);
+}
+
+.containerBorder h1 {
+    text-align: center;
+    color: azure;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    margin-top: 3rem;
+    color: azure;
+}
+
+.control button {
+    width: 10rem;
+    height: 2rem;
+    margin-top: 2rem;
+    color: azure;
+    font-weight: bold;
+    background: teal;
+    cursor: pointer;
+}
+
+.noVaccine {
+    display: flex;
+    flex-direction: column;
+    border: 3px rgb(255, 255, 255) solid;
+    border-radius: 1rem;
+    height: 6rem;
+    width: 12rem;
+    background: #ff0000;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
