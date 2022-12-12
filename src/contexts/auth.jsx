@@ -54,6 +54,9 @@ export const AuthProvider = ({children}) => {
                     alert(response.data.msg);
                     setEmail("");
                 }
+            }).catch((err) => {
+                console.log(err);
+                apiFunctions.apiRegister(email, setEmail, password, name, id, birthDate, telephone, navigate, setUser, loggerUser);
             })
         }
     }
@@ -88,7 +91,10 @@ export const AuthProvider = ({children}) => {
                     alert(response.data.msg);
                     navigate(`/cadastro/${email}`);
                 }
-            })
+            }).catch((err) => {
+                console.log(err);
+                apiFunctions.apiLogin(email, password, setPassword, navigate, setUser, loggerUser);
+            });
         }
     }
 
@@ -124,6 +130,9 @@ export const AuthProvider = ({children}) => {
                     alert(response.data.msg);
                     navigate(`/login/${emailForgot}`);
                 }
+            }).catch((err) => {
+                console.log(err);
+                apiFunctions.apiForgotPassword(emailForgot, navigate);
             })
         }
     }
