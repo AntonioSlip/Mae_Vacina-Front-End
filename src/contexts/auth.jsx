@@ -19,7 +19,7 @@ export const AuthProvider = ({children}) => {
                 setUser(JSON.parse(recoveredUser));
             }
             setLoading(false);
-        }, 3000);
+        }, 1000);
     }, []);
 
     function register(email, password, name, id, birthDate, telephone, setEmail) {

@@ -197,6 +197,21 @@ const apiFunctions = {
         }).catch(err => {
             alert("Erro no servidor" + err);
         });
+    },
+
+    apiDataVaccination: function(dataBase8) {
+        api.get("?sheet=Página3", {
+            auth: {
+                username: userApi,
+                password: passApi,
+            },
+        }).then((response) => {
+            console.log(response.data)
+            /*response.data.map((immunizeds)=> {
+                if(dataBase8.email === immunizeds.immunized) {
+                }
+            })*/
+        })
     }
 }
 

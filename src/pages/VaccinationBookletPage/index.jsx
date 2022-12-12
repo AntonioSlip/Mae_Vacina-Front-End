@@ -17,7 +17,7 @@ function VaccinationBookletPage() {
     const [ vaccine, setVaccine ] = useState("");
     const [ dateOfVaccination, setDateOfVaccination ] = useState("");
     const [ dataVaccination, setDataVaccination ] = useState("");
-    const [ datavaccines, setDataVaccines ] = useState([]);                                   
+    const [ datavaccines, setDataVaccines ] = useState([]);                                  
     const dataBase6 = {
         logger: logger
     } 
@@ -100,7 +100,9 @@ function VaccinationBookletPage() {
         }).catch((err) => {
             alert(err);
         });
+    }, [])
 
+    useEffect(() => {
         axios.post('/api/dataVaccine').then((response) => {
             if(response.data.id === 0) {
                 console.log(response.data.msg);
@@ -117,6 +119,7 @@ function VaccinationBookletPage() {
             axios.post('/api/dataVaccination', dataBase8).then((response) => {
                 if(response.data.id === 0) {
                     console.log(response.data.msg);
+                    apiFunctions.apiDataVaccination(dataBase8);
                 }
                 else if(response.data.id === 1) {
                     setDataVaccination(response.data.dataVaccination);
@@ -128,7 +131,7 @@ function VaccinationBookletPage() {
                 alert(err);
             });
         }
-    }, [dataUser.email, dataVaccination, handleSubmit]);
+    }, [dataUser.email, dataVaccination ,handleSubmit]);
 
     return (
         <div>
